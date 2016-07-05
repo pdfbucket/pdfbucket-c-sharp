@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PDFBucket", "PDFBucket\PDFB
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathClient", "..\MathDummy\MathClient\MathClient.csproj", "{9A2E8478-6D15-494A-AB4B-4F48C38D242A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "example-net4", "example-net4\example-net4.csproj", "{CA207F38-F76D-4397-84C8-3B564D737597}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{9A2E8478-6D15-494A-AB4B-4F48C38D242A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A2E8478-6D15-494A-AB4B-4F48C38D242A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A2E8478-6D15-494A-AB4B-4F48C38D242A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CA207F38-F76D-4397-84C8-3B564D737597}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CA207F38-F76D-4397-84C8-3B564D737597}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CA207F38-F76D-4397-84C8-3B564D737597}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CA207F38-F76D-4397-84C8-3B564D737597}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
