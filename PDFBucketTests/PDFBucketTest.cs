@@ -8,9 +8,14 @@ namespace PDFBucketTests
     public class PDFBucketTest
     {
         [TestMethod, TestCategory("ValidParameters")]
-        public void TestMethod1()
+        public void ShouldReturnAPDFBucketObject()
         {
-            Assert.AreEqual(0, 0);
+            PDFBucket pdfBucket = new PDFBucket.Builder()
+                    .SetApiKey("LDMN2H2AD5OOL973DHTHDDSI5SDRL3VT")
+                    .SetApiSecret("e5utyNlt1FgAdmFgDKjHjod5AsLK1mrSHSfR/85yGWY=")
+                    .SetApiHost("staging.pdfbucket.io")
+                    .Build();
+            Assert.IsInstanceOfType(pdfBucket, typeof(PDFBucket));
         }
     }
 }
