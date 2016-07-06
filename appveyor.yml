@@ -4,7 +4,7 @@ before_build:
 test:
   # assemblies to test
   assemblies:
-    - PDFBucket.dll
+    - PDFBucketTests.dll
 
   categories:
     only:
