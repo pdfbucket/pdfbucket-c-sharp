@@ -5,7 +5,3 @@ test:
   # assemblies to test
   assemblies:
     - PDFBucketTests.dll
-
-  categories:
-    only:
-      - ValidParameters
