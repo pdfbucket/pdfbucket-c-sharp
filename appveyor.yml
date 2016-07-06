@@ -1,7 +1,7 @@
 test:
   # assemblies to test
   assemblies:
-    - PDFBucket.dll
+    - '**\bin\Debug\PDFBucket.dll'
 
   categories:
     only:
