@@ -1,10 +1,14 @@
 # PDFBucket   [![Build Status](https://ci.appveyor.com/api/projects/status/github/pdfbucket/pdfbucket-c-sharp)](https://ci.appveyor.com/project/galopezb/pdfbucket-c-sharp/build/tests)
 
-PDFBucket nuget package allows you to integrate easily with the PDFBucket service. Tested against 4.5, 4.5.1, 4.5.2, 4.6 and 4.6.1 .NET Framework versions.
+PDFBucket package allows you to integrate easily with the PDFBucket service. Tested against 4.5, 4.5.1, 4.5.2, 4.6 and 4.6.1 .NET Framework versions.
 
 ## Installation
 
-TODO
+To install [PDFBucket](https://www.nuget.org/packages/PDFBucket) nuget package, run the following command in the [Package Manager Console](https://docs.nuget.org/consume/package-manager-console).
+
+```
+Install-Package PDFBucket
+```
 
 ## Usage
 
