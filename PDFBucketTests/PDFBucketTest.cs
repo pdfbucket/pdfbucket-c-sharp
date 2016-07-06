@@ -11,9 +11,8 @@ namespace PDFBucketTests
         public void ShouldReturnAPDFBucketObject()
         {
             PDFBucket pdfBucket = new PDFBucket.Builder()
-                    .SetApiKey("LDMN2H2AD5OOL973DHTHDDSI5SDRL3VT")
-                    .SetApiSecret("e5utyNlt1FgAdmFgDKjHjod5AsLK1mrSHSfR/85yGWY=")
-                    .SetApiHost("staging.pdfbucket.io")
+                    .SetApiKey("PIQ7T3GOM7D36R0O67Q97UM3F0I6CPB5")
+                    .SetApiSecret("HieMN8dvi5zfSbKvqxKccxDo3LozqOIrY59U/jrZY54=")
                     .Build();
             Assert.IsInstanceOfType(pdfBucket, typeof(PDFBucket));
         }
