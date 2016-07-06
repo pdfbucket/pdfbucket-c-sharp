@@ -39,7 +39,7 @@ namespace PDFBucketTests
             }
             catch (Exception e)
             {
-                Assert.IsTrue(e.Message.Contains("Invalid uri value, must be not blank"));
+                Assert.IsTrue(e.Message.Contains("Invalid Uri value, must be not blank"));
             }
 
             try
@@ -48,7 +48,7 @@ namespace PDFBucketTests
             }
             catch (Exception e)
             {
-                Assert.IsTrue(e.Message.Contains("Invalid uri value, must be not blank"));
+                Assert.IsTrue(e.Message.Contains("Invalid Uri value, must be not blank"));
             }
         }
 

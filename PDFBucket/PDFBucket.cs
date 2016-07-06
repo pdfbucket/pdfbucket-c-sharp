@@ -27,7 +27,7 @@ namespace PdfBucket
 
         public string GenerateUrl(string Uri, string Orientation, string PageSize, string Margin, string Zoom)
         {
-            if (!Uri.Trim().Equals(String.Empty) &&
+            if (Uri != null && !Uri.Trim().Equals(String.Empty) &&
                 (Orientation == "portrait" || Orientation == "landscape") &&
                 (PageSize == "A4" || PageSize == "Letter"))
             {
@@ -54,9 +54,9 @@ namespace PdfBucket
 
                 return Builder.ToString();
             }
-            else if (Uri.Trim().Equals(String.Empty))
+            else if (Uri == null || Uri.Trim().Equals(String.Empty))
             {
-                throw new ArgumentException("Invalid uri value, must be not blank");
+                throw new ArgumentException("Invalid Uri value, must be not blank");
             }
             else if (Orientation != "portrait" && Orientation != "landscape")
             {
