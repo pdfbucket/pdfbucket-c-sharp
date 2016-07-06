@@ -1,0 +1,8 @@
+test:
+  # assemblies to test
+  assemblies:
+    - PDFBucket.dll
+
+  categories:
+    only:
+      - ValidParameters

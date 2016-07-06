@@ -7,7 +7,7 @@ namespace PDFBucketTests
     [TestClass]
     public class PDFBucketTest
     {
-        [TestMethod]
+        [TestMethod, TestCategory("ValidParameters")]
         public void TestMethod1()
         {
             Assert.AreEqual(0, 0);
