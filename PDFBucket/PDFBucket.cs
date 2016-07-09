@@ -69,6 +69,74 @@ namespace PdfBucket
             return null;
         }
 
+        public string GeneratePlainUrl(string Uri, string Orientation, string PageSize, string Margin, string Zoom)
+        {
+            if (Uri != null && !Uri.Trim().Equals(String.Empty) &&
+                (Orientation == "portrait" || Orientation == "landscape") &&
+                (PageSize == "A4" || PageSize == "Letter"))
+            {
+                var Signature = Sign(ApiSecret, ApiKey, Uri, Orientation, PageSize, Margin, Zoom);
+
+                var Params = new Dictionary<string, string>
+                {
+                    { "orientation", Orientation },
+                    { "page_size", PageSize },
+                    { "margin", Margin },
+                    { "zoom", Zoom },
+                    { "api_key", ApiKey },
+                    { "uri", Uri },
+                    { "signature", Signature }
+                };
+
+                var UrlEncoded = new FormUrlEncodedContent(Params);
+                var Query = UrlEncoded.ReadAsStringAsync().Result;
+
+                UriBuilder Builder = new UriBuilder();
+                Builder.Host = ApiHost;
+                Builder.Path = "/api/convert";
+                Builder.Query = Query;
+                Builder.Scheme = "https";
+
+                return Builder.ToString();
+            }
+            else if (Uri == null || Uri.Trim().Equals(String.Empty))
+            {
+                throw new ArgumentException("Invalid Uri value, must be not blank");
+            }
+            else if (Orientation != "portrait" && Orientation != "landscape")
+            {
+                throw new ArgumentException("Invalid orientation value, must be portrait or landscape");
+            }
+            else if (PageSize != "A4" && PageSize != "Letter")
+            {
+                throw new ArgumentException("Invalid pageSize value, must be A4 or Letter");
+            }
+            return null;
+        }
+
+        private string Sign(string ApiSecret, string ApiKey, string Uri, string Orientation, string PageSize, string Margin, string Zoom)
+        {
+            var parameters = String.Join(",", new string[] {
+                    ApiKey,
+                    Uri,
+                    Orientation,
+                    PageSize,
+                    Margin,
+                    Zoom
+            });
+
+            byte[] bytes = Encoding.UTF8.GetBytes(parameters + ApiSecret);
+            var sha1 = SHA1.Create();
+            byte[] hashBytes = sha1.ComputeHash(bytes);
+            var sb = new StringBuilder();
+            foreach (byte b in hashBytes)
+            {
+                var hex = b.ToString("x2");
+                sb.Append(hex);
+            }
+            return sb.ToString();
+        }
+
         private string encrypt(string Key, string Content)
         {
             byte[] BinaryKey = Convert.FromBase64String(Key);

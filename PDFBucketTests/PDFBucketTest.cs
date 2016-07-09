@@ -31,6 +31,13 @@ namespace PDFBucketTests
         }
 
         [TestMethod]
+        public void ShouldGeneratePlainUrlPassingValidParameters()
+        {
+            var SignedUrl = pdfBucket.GeneratePlainUrl("https://www.joyent.com/", "landscape", "A4", "2px", "0.7");
+            Assert.IsInstanceOfType(SignedUrl, typeof(string));
+        }
+
+        [TestMethod]
         public void ThrowsInvalidUriPassedInWhenUriIsBlank()
         {
             try

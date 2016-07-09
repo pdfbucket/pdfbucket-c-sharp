@@ -38,6 +38,12 @@ And you get the encryptedUrl using the `GenerateUrl` method:
 var EncryptedUrl = pdfBucket.GenerateUrl("http://example.com", "portrait", "A4", "0", "1");
 ```
 
+Also you can pass the plain URL to PDFBucket:
+
+```c#
+var PlainUrl = pdfBucket.GeneratePlainUrl("http://example.com", "portrait", "A4", "0", "1");
+```
+
 * Possible values for orientation: "landscape", "portrait"
 * Possible values for page size: "Letter", "A4"
 * Possible values for margin: https://developer.mozilla.org/en-US/docs/Web/CSS/margin#Formal_syntax

@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>PDFBucket</id>
-    <version>0.1.0</version>
+    <version>0.2.0</version>
     <authors>gustavo-kommit</authors>
     <owners>gustavo-kommit</owners>
     <projectUrl>https://github.com/pdfbucket/pdfbucket-c-sharp</projectUrl>
